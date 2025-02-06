@@ -4,8 +4,9 @@ import SearchEvents from '@/components/forms/searchEvents';
 import EventList from '@/components/eventList';
 import Footer from '@/components/global/footer';
 import Nav from '@/components/global/nav';
-import OpenStreetMap from '@/components/map/open-street-map';  // Importa tu componente de mapa
+import MapCaller from '@/components/map/mapCaller';  // Importa tu componente de mapa
 import axios from 'axios';
+import MapCaller from '@/components/map/mapCaller';
 
 export default function DireccionForm() {
   const [events, setEvents] = useState([]);  // Eventos
@@ -49,7 +50,7 @@ export default function DireccionForm() {
 
       {/* Si tenemos una dirección y sus coordenadas, mostramos el mapa */}
       {position && position.length === 2 && (
-        <OpenStreetMap
+        <MapCaller
           coordinates={coordinates}  // Coordenadas de eventos
           position={position}         // Coordenadas de la dirección
         />
