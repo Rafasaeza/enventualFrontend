@@ -6,7 +6,7 @@ import Footer from '@/components/global/footer';
 import Nav from '@/components/global/nav';
 import MapCaller from '@/components/map/mapCaller';  // Importa tu componente de mapa
 import axios from 'axios';
-import MapCaller from '@/components/map/mapCaller';
+
 
 export default function DireccionForm() {
   const [events, setEvents] = useState([]);  // Eventos
